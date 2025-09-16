@@ -3,4 +3,6 @@ project(ProyectoII_Operativos_I)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(ProyectoII_Operativos_I main.cpp)
+add_executable(ProyectoII_Operativos_I main.cpp
+        Cliente.cpp
+        Cliente.h)
