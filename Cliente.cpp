@@ -27,6 +27,10 @@ enum Cliente::Status Cliente::getStatus() {
     return this->status;
 }
 
+bool Cliente::getRevision() {
+    return this->revision;
+}
+
 void Cliente::setId(int id) {
     this->ID = id;
 }
@@ -41,6 +45,10 @@ void Cliente::setOperation(Operation op) {
 
 void Cliente::setStatus(Status status) {
     this->status = status;
+}
+
+void Cliente::setRevision(bool revision) {
+    this->revision = revision;
 }
 
 
@@ -65,10 +73,8 @@ string Cliente::statusToString(Status s) {
 }
 
 void Cliente::printClient() {
-    cout << "--- Cliente " << ID << " ---\n"
-         << "> Estado: " << statusToString(status) << "\n"
-         << "> Operacion: " << operationToString(operation) << "\n"
-         << "> Tiempo de llegada: " << tiempo_llegada << endl;
+    cout << "Cliente: " << ID
+         << ", Operacion: " << operationToString(operation)<< endl;
 }
 
 void Cliente::printStatus(string past_status) {

@@ -28,14 +28,16 @@ public:
     Operation getOperation();
     int getId();
     int getTime();
+    bool getRevision();
 
     // Setters
     void setStatus(Status s);
     void setOperation(Operation op);
     void setId(int id);
     void setTime(int time);
+    void setRevision(bool revision);
 
-    // Helpers
+    // toString
     string operationToString(Operation op);
     string statusToString(Status s);
 
@@ -48,6 +50,7 @@ private:
     Operation operation;
     Status status;
     int tiempo_llegada;
+    bool revision = false; //flag de si ya paso por revision
 
 };
 
